@@ -64,6 +64,11 @@ footer {
   justify-content: space-between;
 }
 
+.icons-footer {
+  display: flex;
+  align-items: center;
+}
+
 .icon-link .icons {
   color: #000; /* cor inicial */
   transition: color 0.3s ease;
