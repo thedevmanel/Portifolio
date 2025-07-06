@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" text="type/css" />
+    <title>Contato</title>
+</head>
+
+<style>
+    footer {
+        position: relative;
+        margin-top: 30vh;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre mim</a>
+            </li>
+            <li>
+                <a href="projetos.html">Projetos</a>
+            </li>
+            <li>
+                <a href="contato.html"> <span class="pag-sel">Contato</span></a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class="info-contato">
+            Para entrar em contato, digite seu nome e seu email nos campos para que possamos nos comunicar. Ou entre em
+            contato com o <span class="end-email"> emanuelzrabello@gmail.com </span>
+        </div>
+    </section>
+    <form id="contact-form">
+        <div class="forms-contato">
+            <div class="inputs-user">
+                <label for="nome">nome</label>
+                <input type="text" name="nome" id="nome" autocomplete="off" required /> <br />
+                <label for="email">email</label>
+                <input type="text" name="email" id="email" autocomplete="off" required /> <br />
+            </div>
+            <textarea placeholder="Sua mensagem" name="mensagem" id="mensagem" required></textarea>
+        </div>
+        <button class="enviar-forms" type="submit"> Enviar </button>
+    </form>
+    <footer>
+        <div class="footer">
+            <p>
+                ©2025 - Todos os direitos reservado a Emanuel Rabello
+            </p>
+            <div class="icons-footer">
+                <a target="_blank" href="https://www.linkedin.com/in/emanuel-rabello-0515b1270/"> <img class="icons"
+                        src="./imagens/linkedin.svg" alt=""> </a>
+                <a target="_blank" href="https://github.com/thedevmanel"> <img class="icons" src="./imagens/github.svg"
+                        alt=""> </a>
+                <a target="_blank" href="https://www.instagram.com/m4nel_drawings/"> <img class="icons"
+                        src="./imagens/instagram.svg" alt=""> </a>
+            </div>
+        </div>
+    </footer>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/enviar-form.js"></script>
+</body>
+
+</html>
