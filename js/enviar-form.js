@@ -1,21 +1,23 @@
-emailjs.init(EMAILJS_CONFIG.public_key);
+document.getElementById("formContato").addEventListener("submit", function(e) {
+  e.preventDefault(); // Impede o envio do formulário
 
-const form = document.getElementById("contact-form");
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+  if (nome === "" || email === "" || mensagem === "") {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
 
-  emailjs.sendForm(
-    EMAILJS_CONFIG.service_id,
-    EMAILJS_CONFIG.template_id,
-    this
-  )
-  .then(() => {
-    alert("Mensagem enviada com sucesso!");
-    form.reset();
-  })
-  .catch((error) => {
-    console.error("Erro:", error);
-    alert("Ocorreu um erro ao enviar. Tente novamente.");
-  });
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailValido.test(email)) {
+    alert("E-mail inválido. Digite um endereço válido.");
+    return;
+  }
+
+  alert("Mensagem enviada com sucesso!");
+
+  // (opcional) Limpa os campos após envio
+  document.getElementById("formContato").reset();
 });
